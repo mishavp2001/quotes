@@ -3,17 +3,23 @@
 }
 
 .App-logo {
-  height: 5vmin;
-  align-self:  baseline;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    text-align: center;
     animation: App-logo-spin 1s linear;
+    text-align: left;
   }
 }
+
+.App-header img{
+  text-align: left;
+  margin: 5px;
+  position: absolute;
+  left: 6em;
+}
+
 
 .App-header {
   background-color: #17346f;
@@ -98,5 +104,19 @@
   font-size: large;
   font-weight: 300;
   cursor: pointer;
+}
+
+.iframe-page {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.licence {
+  font-size: small;
+  position: absolute;
+  color: white;
+  top: 0px;
+  text-align: left;
 }
 

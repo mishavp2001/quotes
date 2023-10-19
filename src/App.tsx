@@ -32,28 +32,12 @@ function App() {
                   onClick={()=>{setInsurance('');console.log("Insurance context = " + value.insurance)}}
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                 >
+                  <p className='licence'>
+                    INSURANCE CENTER HELPLINE, INC <br />
+                    CA LIC.#0I21751 <br />
+                    CORP LIC.#0M24022 <br />
+                  </p>
                   <img src={logo} className="App-logo" alt="logo" />
-                </NavLink>
-                <NavLink
-                  to="health"
-                  onClick={()=>{setInsurance('Health');console.log("Insurance context = " + value.insurance)}}
-                  className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
-                >
-                  Health
-                </NavLink>
-                <NavLink
-                  onClick={()=>{setInsurance('Dental');console.log("Insurance context = " + value.insurance)}}
-                  className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
-                  to="dental"
-                >
-                  Dental
-                </NavLink>
-                <NavLink
-                  onClick={()=>{setInsurance('Vision');console.log("Insurance context = " + value.insurance)}}
-                  className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
-                  to="Vision"
-                >
-                  Vision
                 </NavLink>
                 <NavLink
                   onClick={()=>{setInsurance('Medicare');console.log("Insurance context = " + value.insurance)}}
@@ -72,18 +56,13 @@ function App() {
         </header>
         <main className="App-body">
               <div  className="calc-container">
-                <h3>Shop and compare plans</h3> 
                 <Routes>
-                  <Route path="/" element ={<Home/>} />
-                  <Route path="/Health" element ={<Health />} />
+                  <Route path="/" element ={<Health/>} />
                   <Route path="/Dental" element ={<Dental />} />
                   <Route path="/Vision" element ={<Vision />} />
                   <Route path="/Medicare" element ={<Medicare />} />
                   <Route path="/Travel" element ={<Travel />} />
                 </Routes>
-                {insurance && <button className="estimate">
-                  Get {insurance} insurance with monthly premium: $0  
-                </button>}  
               </div>  
         </main>
         </BrowserRouter>  

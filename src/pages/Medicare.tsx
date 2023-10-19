@@ -7,18 +7,7 @@ function Medicare(){
 
 
   return (
-    <form className="quote-form">
-        Medicare
-          <label>Enter your ZIP code:
-            <input
-              type="text" 
-              value='95746'
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-
-
-        </form>
+    <iframe src="https://www.planenroll.com/plans?purl=uxFUtqio" className="iframe-page" />
  )
 } 
 
