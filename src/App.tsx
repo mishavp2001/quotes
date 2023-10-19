@@ -11,11 +11,11 @@ import Vision from "./pages/Vision";
 import Medicare from "./pages/Medicare";
 
 import './App.css';
-import { log } from 'console';
+import { string } from 'prop-types';
 
 const InsuranceContext = createContext({
-  insurance: String,
-  setInsurance: () => {}
+  insurance: 'string',
+  setInsurance: (type:string) => {}
 });
 
 function App() {
