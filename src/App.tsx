@@ -24,15 +24,10 @@ function App() {
 
   return (
     <InsuranceContext.Provider value={value}>
+
       <div className="App">
-        <BrowserRouter>   
+        <BrowserRouter>
         <header className="App-header">
-             <img src={logo} className="App-logo" alt="logo" />
-             <p className='licence'>
-                    INSURANCE CENTER HELPLINE, INC <br />
-                    CA LIC.#0I21751 <br />
-                    CORP LIC.#0M24022 <br />
-                  </p>
               <NavLink
                   to="/"
                   onClick={()=>{setInsurance('');console.log("Insurance context = " + value.insurance)}}
@@ -54,9 +49,13 @@ function App() {
                 >
                   Travel
                 </NavLink>
+                <img src={logo} className="App-logo" alt="logo" />
+                <div className="license">
+                    CA LIC.#0I21751 <br/>
+                    CORP LIC.#0M24022
+                </div>
         </header>
         <main className="App-body">
-
               <div  className="calc-container">
                 <Routes>
                   <Route path="/" element ={<Health/>} />

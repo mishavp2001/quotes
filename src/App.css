@@ -22,12 +22,17 @@
   top: -1em
 }
 
-.App-header .licence {
-  text-align: right;
-  width: 10%;
-  margin: 1em;
+.App-header .license {
+  text-align: left;
+  font-size: small;
+  width: 11em;
+  height: 3em;
+  /* margin: 1em; */
+  background-color: #4e84e4;
   position: absolute;
   right: 0em;
+  top: 12em;
+  padding: 1em;
 }
 
 .App-header {
@@ -35,7 +40,7 @@
   height: 5em;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: right;
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -50,7 +55,7 @@
 .calc-container {
   color: white;
   text-align: left;
-  padding: 6em 1em 1em 0em;
+  padding: 7em 1em 0em 1em;
 }
 .calc-container h3 {
   color: black;
@@ -64,7 +69,6 @@
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
-  height: 100vh;
 }
 
 .App-link {
@@ -124,8 +128,11 @@
 .licence {
   font-size: small;
   position: absolute;
+  background-color: #17346f;
+  padding: 1em;
   color: white;
-  top: 0px;
+  top: 4em;
   text-align: left;
+  left: -1em;
 }
 

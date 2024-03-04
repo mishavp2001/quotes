@@ -7,7 +7,7 @@ function Medicare(){
 
 
   return (
-    <iframe src="https://www.planenroll.com/?purl=uxFUtqio" className="iframe-page" />
+    <iframe src="https://www.planenroll.com/?purl=uxFUtqio" className="iframe-page medicare" />
  )
 } 
 
