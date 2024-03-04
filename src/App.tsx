@@ -27,17 +27,18 @@ function App() {
       <div className="App">
         <BrowserRouter>   
         <header className="App-header">
+             <img src={logo} className="App-logo" alt="logo" />
+             <p className='licence'>
+                    INSURANCE CENTER HELPLINE, INC <br />
+                    CA LIC.#0I21751 <br />
+                    CORP LIC.#0M24022 <br />
+                  </p>
               <NavLink
                   to="/"
                   onClick={()=>{setInsurance('');console.log("Insurance context = " + value.insurance)}}
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                 >
-                  <p className='licence'>
-                    INSURANCE CENTER HELPLINE, INC <br />
-                    CA LIC.#0I21751 <br />
-                    CORP LIC.#0M24022 <br />
-                  </p>
-                  <img src={logo} className="App-logo" alt="logo" />
+                  Health Insurance
                 </NavLink>
                 <NavLink
                   onClick={()=>{setInsurance('Medicare');console.log("Insurance context = " + value.insurance)}}
@@ -55,6 +56,7 @@ function App() {
                 </NavLink>
         </header>
         <main className="App-body">
+
               <div  className="calc-container">
                 <Routes>
                   <Route path="/" element ={<Health/>} />
