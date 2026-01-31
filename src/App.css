@@ -15,48 +15,59 @@
 
 .App-header img{
   text-align: left;
-  width: 10%;
-  margin: 1em;
+  width: 50px;
+  max-width: 8%;
+  margin: 0.3em;
   position: absolute;
-  left: -1em;
-  top: -1em
+  left: 0;
+  top: 0;
 }
 
 .App-header .license {
   text-align: left;
-  font-size: small;
-  width: 11em;
-  height: 3em;
-  /* margin: 1em; */
+  font-size: 0.5rem;
+  width: auto;
+  max-width: 9em;
   background-color: #4e84e4;
   position: absolute;
-  right: 0em;
-  top: 12em;
-  padding: 1em;
+  right: 0.3em;
+  top: 0.3em;
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+  line-height: 1.3;
 }
 
 .App-header {
   background-color: #17346f;
-  height: 5em;
+  min-height: 3em;
   display: flex;
   flex-direction: row;
-  align-items: right;
-  justify-content: left;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.85rem;
   color: white;
-  width: 100vmax;
-  position:fixed;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  padding: 0.25em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .App-body {
   background-color: #7eb2d7;
   font-size: calc(10px + 2vmin);
+  min-height: 100vh;
 }
+
 .calc-container {
   color: white;
   text-align: left;
-  padding: 7em 1em 0em 1em;
+  padding: 4em 1em 1em 1em;
 }
+
 .calc-container h3 {
   color: black;
   padding-left: 1em;
@@ -73,20 +84,43 @@
 
 .App-link {
   color: #ffffff;
-  display: inline;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-color: #17346f;
-  height: 1em;
-  padding: 2em;
-  margin: 0.5em 0em 0em;
-  border:1px solid gray;
-  border-width:1px 1px 0px;
-  flex: 16%;
+  padding: 0.4em 0.8em;
+  margin: 0.15em;
+  border: 1px solid gray;
+  border-width: 1px 1px 0px;
+  flex: 1 1 auto;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  gap: 0.2em;
+}
+
+.App-link:hover {
+  background-color: #4e84e4;
+  transform: translateY(-1px);
 }
 
 .App-link.active-link {
   color: white;
   background-color: #7eb2d7;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  display: block;
+}
+
+.nav-text {
+  font-size: 0.75rem;
+  display: block;
+  font-weight: 500;
 }
 
 @keyframes App-logo-spin {
@@ -99,30 +133,68 @@
 }
 
 .quote-form, .summary {
-  background-color: rgb(74, 132, 195);
-  margin: 1em;
-  padding: 1em;
-  height: 100vh;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
   text-align: left;
+  box-sizing: border-box;
+}
+
+.quote-form label {
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  font-weight: 500;
+  color: #17346f;
+}
+
+.quote-form input,
+.quote-form Field {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6em;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.quote-form button {
+  margin-top: 1em;
+  padding: 0.6em 1.5em;
+  font-size: 0.95rem;
+  background-color: #6bda5c;
+  color: #17346f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.quote-form button:hover {
+  background-color: #5bc94c;
 }
 
 .estimate {
   background-color: #6bda5c;
   color: #17346f;
-  position: absolute;
-  bottom: -10px;
-  padding: 1em;
-  border-radius: 3em;
-  margin: 10em;
-  font-size: large;
-  font-weight: 300;
+  position: fixed;
+  bottom: 0.8em;
+  right: 0.8em;
+  padding: 0.8em;
+  border-radius: 2em;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
 }
 
 .iframe-page {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 5em);
   background-color: white;
+  border: none;
+  display: block;
 }
 
 .licence {
@@ -133,6 +205,284 @@
   color: white;
   top: 4em;
   text-align: left;
-  left: -1em;
+  left: 0;
+}
+
+/* Modern Page Layout Styles - Compact Version */
+.page-hero {
+  background: linear-gradient(135deg, #17346f 0%, #4e84e4 100%);
+  color: white;
+  padding: 1.5em 1.5em;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-hero h1 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.page-hero p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.page-content {
+  background: white;
+  border-radius: 6px;
+  padding: 1.2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1em;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  padding: 1.2em;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5em;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  color: #17346f;
+  margin: 0.3em 0;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.8em;
+}
+
+.iframe-wrapper {
+  background: white;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1em;
+}
+
+.iframe-wrapper h2 {
+  color: #17346f;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  font-size: 1.4rem;
+}
+
+.icon-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.3em;
+  display: block;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .App-header {
+    min-height: auto;
+    padding: 0.2em 0;
+  }
+
+  .App-header img {
+    width: 40px;
+    margin: 0.3em;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .App-header .license {
+    position: static;
+    margin: 0.3em auto;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    font-size: 0.55rem;
+    padding: 0.3em;
+  }
+
+  .App-link {
+    flex: 1 1 calc(50% - 0.3em);
+    font-size: 0.65rem;
+    padding: 0.4em 0.3em;
+    margin: 0.15em;
+    gap: 0.15em;
+  }
+
+  .nav-icon {
+    font-size: 1rem;
+  }
+
+  .nav-text {
+    font-size: 0.65rem;
+  }
+
+  .calc-container {
+    padding: 6em 0.5em 0.5em 0.5em;
+  }
+
+  .quote-form, .summary {
+    margin: 0;
+    padding: 0;
+  }
+
+  .quote-form input,
+  .quote-form Field {
+    max-width: 100%;
+  }
+
+  .iframe-page {
+    height: calc(100vh - 7em);
+  }
+
+  .estimate {
+    bottom: 0.5em;
+    right: 0.5em;
+    padding: 0.6em;
+    font-size: 0.85rem;
+  }
+
+  .page-hero {
+    padding: 1.2em 1em;
+    margin-bottom: 0.8em;
+  }
+
+  .page-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-hero p {
+    font-size: 0.85rem;
+  }
+
+  .page-content {
+    padding: 1em;
+    margin-bottom: 0.8em;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+    margin: 0.8em 0;
+  }
+
+  .feature-card {
+    padding: 1em;
+  }
+
+  .icon-emoji {
+    font-size: 2rem;
+  }
+
+  .iframe-wrapper {
+    padding: 0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .iframe-wrapper h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .App-link {
+    flex: 1 1 100%;
+    margin: 0.1em 0.3em;
+    padding: 0.5em;
+    font-size: 0.7rem;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+
+  .nav-text {
+    font-size: 0.7rem;
+  }
+
+  .App-header img {
+    width: 35px;
+    margin: 0.3em auto;
+  }
+
+  .calc-container {
+    padding: 10em 0.3em 0.5em 0.3em;
+  }
+
+  .quote-form, .summary {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-hero {
+    padding: 1em 0.8em;
+  }
+
+  .page-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .page-hero p {
+    font-size: 0.8rem;
+  }
+
+  .page-content {
+    padding: 0.8em;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  .icon-emoji {
+    font-size: 2rem;
+  }
+
+  .iframe-wrapper h2 {
+    font-size: 1.1rem;
+  }
 }
 

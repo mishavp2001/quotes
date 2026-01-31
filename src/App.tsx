@@ -9,6 +9,7 @@ import Dental from "./pages/Dental";
 import Travel from "./pages/Travel";
 import Vision from "./pages/Vision";
 import Medicare from "./pages/Medicare";
+import EmployeeBenefits from "./pages/EmployeeBenefits";
 
 import './App.css';
 import { string } from 'prop-types';
@@ -33,21 +34,32 @@ function App() {
                   onClick={()=>{setInsurance('');console.log("Insurance context = " + value.insurance)}}
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                 >
-                  Health Insurance
+                  <span className="nav-icon">🏥</span>
+                  <span className="nav-text">Health</span>
                 </NavLink>
                 <NavLink
                   onClick={()=>{setInsurance('Medicare');console.log("Insurance context = " + value.insurance)}}
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                   to="Medicare"
                 >
-                  Medicare
+                  <span className="nav-icon">🩺</span>
+                  <span className="nav-text">Medicare</span>
                 </NavLink>
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                   onClick={()=>{setInsurance('Travel');console.log("Insurance context = " + value.insurance)}}
                   to="Travel"
                 >
-                  Travel
+                  <span className="nav-icon">✈️</span>
+                  <span className="nav-text">Travel</span>
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
+                  onClick={()=>{setInsurance('EmployeeBenefits');console.log("Insurance context = " + value.insurance)}}
+                  to="EmployeeBenefits"
+                >
+                  <span className="nav-icon">🏢</span>
+                  <span className="nav-text">Benefits</span>
                 </NavLink>
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className="license">
@@ -63,8 +75,9 @@ function App() {
                   <Route path="/Vision" element ={<Vision />} />
                   <Route path="/Medicare" element ={<Medicare />} />
                   <Route path="/Travel" element ={<Travel />} />
+                  <Route path="/EmployeeBenefits" element ={<EmployeeBenefits />} />
                 </Routes>
-              </div>  
+              </div>
         </main>
         </BrowserRouter>  
 
