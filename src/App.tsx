@@ -29,12 +29,13 @@ function App() {
       <div className="App">
         <BrowserRouter>
         <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
               <NavLink
                   to="/"
                   onClick={()=>{setInsurance('');console.log("Insurance context = " + value.insurance)}}
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                 >
-                  <span className="nav-icon">🏥</span>
+                  <span className="nav-icon">👨‍⚕️</span>
                   <span className="nav-text">Health</span>
                 </NavLink>
                 <NavLink
@@ -42,7 +43,7 @@ function App() {
                   className={({ isActive }) => (isActive ? 'active-link App-link' : 'link App-link')}
                   to="Medicare"
                 >
-                  <span className="nav-icon">🩺</span>
+                  <span className="nav-icon">👵🏻</span>
                   <span className="nav-text">Medicare</span>
                 </NavLink>
                 <NavLink
@@ -61,7 +62,6 @@ function App() {
                   <span className="nav-icon">🏢</span>
                   <span className="nav-text">Benefits</span>
                 </NavLink>
-                <img src={logo} className="App-logo" alt="logo" />
                 <div className="license">
                     CA LIC.#0I21751 <br/>
                     CORP LIC.#0M24022

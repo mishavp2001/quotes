@@ -15,8 +15,8 @@
 
 .App-header img{
   text-align: left;
-  width: 50px;
-  max-width: 8%;
+  width: 150px;
+  max-width: 50%;
   margin: 0.3em;
   position: absolute;
   left: 0;
@@ -25,7 +25,7 @@
 
 .App-header .license {
   text-align: left;
-  font-size: 0.5rem;
+  font-size: 1rem;
   width: auto;
   max-width: 9em;
   background-color: #4e84e4;
@@ -39,7 +39,7 @@
 
 .App-header {
   background-color: #17346f;
-  min-height: 3em;
+  min-height: 4em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -113,12 +113,12 @@
 }
 
 .nav-icon {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   display: block;
 }
 
 .nav-text {
-  font-size: 0.75rem;
+  font-size: 1.75rem;
   display: block;
   font-weight: 500;
 }
@@ -198,7 +198,7 @@
 }
 
 .licence {
-  font-size: small;
+  font-size: 1.85rem;
   position: absolute;
   background-color: #17346f;
   padding: 1em;
@@ -319,7 +319,7 @@
   }
 
   .App-header img {
-    width: 45px;
+    width: 125px;
     margin: 0.4em;
     position: relative;
     left: 0;
@@ -446,7 +446,7 @@
   }
 
   .App-body {
-    margin-top: 10em;
+    margin-top: 13em;
   }
 
   .App-link {
@@ -467,7 +467,7 @@
   }
 
   .App-header img {
-    width: 45px;
+    width: 125px;
     margin: 0.4em auto;
   }
 
