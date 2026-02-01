@@ -311,12 +311,16 @@
 @media screen and (max-width: 768px) {
   .App-header {
     min-height: auto;
-    padding: 0.2em 0;
+    padding: 0.3em 0;
+  }
+
+  .App-body {
+    margin-top: 3em;
   }
 
   .App-header img {
-    width: 40px;
-    margin: 0.3em;
+    width: 45px;
+    margin: 0.4em;
     position: relative;
     left: 0;
     top: 0;
@@ -324,32 +328,32 @@
 
   .App-header .license {
     position: static;
-    margin: 0.3em auto;
+    margin: 0.4em auto;
     width: 100%;
     max-width: none;
     text-align: center;
-    font-size: 0.55rem;
-    padding: 0.3em;
+    font-size: 0.65rem;
+    padding: 0.4em;
   }
 
   .App-link {
-    flex: 1 1 calc(50% - 0.3em);
-    font-size: 0.65rem;
-    padding: 0.4em 0.3em;
-    margin: 0.15em;
-    gap: 0.15em;
+    flex: 1 1 calc(50% - 0.4em);
+    font-size: 0.85rem;
+    padding: 0.6em 0.4em;
+    margin: 0.2em;
+    gap: 0.3em;
   }
 
   .nav-icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .nav-text {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
   }
 
   .calc-container {
-    padding: 6em 0.5em 0.5em 0.5em;
+    padding: 7em 0.6em 0.6em 0.6em;
   }
 
   .quote-form, .summary {
@@ -360,59 +364,78 @@
   .quote-form input,
   .quote-form Field {
     max-width: 100%;
+    font-size: 1rem;
+    padding: 0.75em;
+  }
+
+  .quote-form label {
+    font-size: 1rem;
+  }
+
+  .quote-form button {
+    font-size: 1rem;
+    padding: 0.75em 1.5em;
   }
 
   .iframe-page {
-    height: calc(100vh - 7em);
+    height: calc(100vh - 8em);
   }
 
   .estimate {
-    bottom: 0.5em;
-    right: 0.5em;
-    padding: 0.6em;
-    font-size: 0.85rem;
+    bottom: 0.6em;
+    right: 0.6em;
+    padding: 0.75em;
+    font-size: 1rem;
   }
 
   .page-hero {
-    padding: 1.2em 1em;
-    margin-bottom: 0.8em;
+    padding: 1.5em 1.2em;
+    margin-bottom: 1em;
   }
 
   .page-hero h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .page-hero p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .page-content {
-    padding: 1em;
-    margin-bottom: 0.8em;
+    padding: 1.2em;
+    margin-bottom: 1em;
   }
 
   .feature-grid {
     grid-template-columns: 1fr;
-    gap: 0.8em;
-    margin: 0.8em 0;
+    gap: 1em;
+    margin: 1em 0;
   }
 
   .feature-card {
-    padding: 1em;
+    padding: 1.2em;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
   }
 
   .icon-emoji {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .iframe-wrapper {
-    padding: 0.8em;
-    margin-bottom: 0.8em;
+    padding: 1em;
+    margin-bottom: 1em;
   }
 
   .iframe-wrapper h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.6em;
+    font-size: 1.5rem;
+    margin-bottom: 0.8em;
   }
 }
 
@@ -422,30 +445,38 @@
     align-items: stretch;
   }
 
+  .App-body {
+    margin-top: 10em;
+  }
+
   .App-link {
     flex: 1 1 100%;
-    margin: 0.1em 0.3em;
-    padding: 0.5em;
-    font-size: 0.7rem;
+    margin: 0.2em 0.4em;
+    padding: 0.7em;
+    font-size: 0.95rem;
     flex-direction: row;
-    gap: 0.5em;
+    gap: 0.6em;
   }
 
   .nav-icon {
-    font-size: 1.1rem;
+    font-size: 2.6rem;
   }
 
   .nav-text {
-    font-size: 0.7rem;
+    font-size: 1.25rem;
   }
 
   .App-header img {
-    width: 35px;
-    margin: 0.3em auto;
+    width: 45px;
+    margin: 0.4em auto;
+  }
+
+  .App-header .license {
+    font-size: 0.7rem;
   }
 
   .calc-container {
-    padding: 10em 0.3em 0.5em 0.3em;
+    padding: 11em 0.5em 0.5em 0.5em;
   }
 
   .quote-form, .summary {
@@ -453,36 +484,59 @@
     padding: 0;
   }
 
-  .page-hero {
-    padding: 1em 0.8em;
-  }
-
-  .page-hero h1 {
-    font-size: 1.3rem;
-  }
-
-  .page-hero p {
-    font-size: 0.8rem;
-  }
-
-  .page-content {
+  .quote-form input,
+  .quote-form Field {
+    font-size: 1.1rem;
     padding: 0.8em;
   }
 
-  .feature-card h3 {
-    font-size: 1rem;
+  .quote-form label {
+    font-size: 1.1rem;
   }
 
-  .feature-card p {
-    font-size: 0.85rem;
+  .quote-form button {
+    font-size: 1.1rem;
+    padding: 0.8em 1.8em;
   }
 
-  .icon-emoji {
+  .page-hero {
+    padding: 1.5em 1em;
+  }
+
+  .page-hero h1 {
     font-size: 2rem;
   }
 
-  .iframe-wrapper h2 {
+  .page-hero p {
     font-size: 1.1rem;
+  }
+
+  .page-content {
+    padding: 1.2em;
+  }
+
+  .feature-card {
+    padding: 1.5em;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 1.05rem;
+  }
+
+  .icon-emoji {
+    font-size: 3.5rem;
+  }
+
+  .iframe-wrapper {
+    padding: 1.2em;
+  }
+
+  .iframe-wrapper h2 {
+    font-size: 1.6rem;
   }
 }
 
